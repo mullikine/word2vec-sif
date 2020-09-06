@@ -1,7 +1,14 @@
+#!/usr/bin/env python3.8
+# -*- coding: utf-8 -*-
+
 import gensim
 from gensim.models import Word2Vec
 from fse.models import sif
 from fse import IndexedList
+
+import shanepy
+import shanepy as spy
+from shanepy import *
 
 import spacy
 nlp = spacy.load('en_core_web_sm', disable=['ner', 'parser'])
@@ -125,6 +132,7 @@ def get_sif_model(docs):
     :return: word2vec-sif model with 
     the document embeddings, and the indexed list representation
     """
+    myembed(globals(), locals())
     cleaned_data = clean_data(docs)
     w2v = create_w2v_model(cleaned_data)
     w2v_sif = create_sif_model(w2v, cleaned_data)
