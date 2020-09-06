@@ -110,8 +110,10 @@ def get_doc_vectors(sif_model, indexed_list):
 
 def query_documents(query_string, model, indexed_list, n_results = 10):
     """
-    This function querys your list of documents based on a semantic similarity to the
-    input string. You will get the n top matching results.
+    This function queries your list of
+    documents based on a semantic similarity
+    to the input string. You will get the n
+    top matching results.
 
     :query_string: the query string you are searching for
     :model: word2vec-sif model
